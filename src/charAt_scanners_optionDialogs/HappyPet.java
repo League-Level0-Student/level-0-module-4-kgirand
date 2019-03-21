@@ -14,11 +14,14 @@ public class HappyPet {
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task = JOptionPane.showOptionDialog(null, "Question", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "Button1", "Button2", "Button3" }, null);
-
+		String input = JOptionPane.showInputDialog("What is the name of your real or imaginary pet?");
+		for(int i = 0; i<5; i++) {
+		int task = JOptionPane.showOptionDialog(null, "What would you like to do to make your pet happier?", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "Take " + input + " on a walk", "Groom " + input, "Feed " + input }, null);
+		JOptionPane.showMessageDialog(null, input + " thanks you for your care and attention.");
+		}
 			// 5. Use user input to call the appropriate method created in step 4.
-
+JOptionPane.showMessageDialog(null, "It seems like " + input + "'s hapiness level is high enough for you to take a break. You are great of taking care of your pet.");
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 
